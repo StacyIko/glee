@@ -40,6 +40,17 @@
   &__list-link {
     font-family: $rubik-500;
     line-height: 1;
+		&:hover{
+			text-decoration: underline;
+		}
+
+		&:focus {
+			color: $navy;
+		}
+
+		&:active {
+			color: $black;
+		}
   }
 }
 
@@ -48,109 +59,163 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 318px;
-
+	
+	svg {
+		fill: $navy;
+	}
+	svg:hover {
+		fill: $light-navy;
+	}
   &__search,
   &__menu {
     display: block;
     width: 50px;
     height: 50px;
     border-radius: 50%;
+		transition: filter .3s;
+		& svg {
+			position: absolute;
+			top: 50%;
+    	left: 50%;
+			transform: translate(-50%, -50%);
+    	line-height: 50px;
+		}
   }
 
   &__search {
     background-color: #edf1f4;
     position: relative;
 
-    &:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-image: url('../images/icons/search.svg');
-      background-repeat: no-repeat;
-      background-size: 16px 16px;
-      background-position: center center;
-    }
+		& svg {
+			fill: $navy;
+		}
+    // &:before {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-image: url('../images/icons/search.svg');
+    //   background-repeat: no-repeat;
+    //   background-size: 16px 16px;
+    //   background-position: center center;
+    // }
   }
 
   &__block {
-    display: block;
+    display: flex;
+		align-items: center;
     width: 178px;
-    height: 100%;
-    border-radius: 10px;
+    height: 50px;
+    border-radius: 22px;
     background-color: $beige;
-    padding: 9px 0;
 		line-height: 1;
+		transition: filter .3s;
   }
 
   &__fav {
     display: inline-block;
     width: 90px;
-    height: 16px;
+    height: 34px;
     border-right: 1px solid $light-beige;
     position: relative;
 
     & svg {
       width: 20px;
-      height: 100%;
+      height: 16px;
       position: absolute;
-      top: 1px;
+			bottom: 4px;
       left: 50%;
 			transform: translateX(-50%);
       fill: $navy;
       line-height: 32px;
+			transition: fill .3s;
     }
+
+		& svg:hover {
+			fill: $light-navy;
+		}
   }
 
-	&__icon {
-		position: relative;
-	}
-
 	&__num {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-family: $dmsans-400;
-      font-size: 10px;
-      line-height: 15px;
-      text-align: center;
-      background-color: #ffffff;
-    }
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+		right: 26px;
+    font-family: $dmsans-400;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    background-color: #ffffff;
+  }
 
 
   &__cart {
     display: inline-block;
     width: 83px;
-    height: 16px;
+    height: 34px;
     margin: 0 auto;
     position: relative;
-
-    &:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
+		& svg {
+			width: 20px;
+      height: 16px;
       position: absolute;
-      top: 1px;
-      left: 0;
-      background-image: url('../images/icons/cart.svg');
-      background-repeat: no-repeat;
-      background-size: 16px 16px;
-      background-position: center center;
-    }
+			bottom: 4px;
+      left: 50%;
+			transform: translateX(-50%);
+      fill: $navy;
+      line-height: 32px;
+			transition: fill .3s;
+		}
 
-    
-    &__menu {
-      background-color: $light-blue;
+    // &:before {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   height: 16px;
+    //   position: absolute;
+    //   bottom: 4px;
+    //   left: -1px;
+    //   background-image: url('../images/icons/cart.svg');
+    //   background-repeat: no-repeat;
+    //   background-size: 16px 16px;
+    //   background-position: center center;
     }
-  }
+	
+    
+  &__menu {
+    background-color: $light-blue;
+		position: relative;
+		// &:before {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-image: url('../images/icons/menu.svg');
+    //   background-repeat: no-repeat;
+    //   background-size: 16px 16px;
+    //   background-position: center center;
+		// }
+	}
+
+	&__search:hover,
+	&__menu:hover,
+	&__block:hover {
+		filter: brightness(97%);
+	}
+
+	&__fav:hover, 
+	&__cart:hover {
+		
+	}
 }
   .sr-only {
     position: absolute;
