@@ -7,4 +7,10 @@ $(function() {
 		dots: true,
 		arrows: false
 	});
+
+	var mixer = mixitup('.product-cards', {
+		animation: {
+        duration: 300
+    }
+	});
 });

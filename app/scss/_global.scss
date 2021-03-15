@@ -2,12 +2,18 @@ body {
 	color: $navy;
 	font-size: 16px;
 	line-height: 1.9;
+	background-color: #ffffff;
 }
 
 .container {
+	width: 100%;
 	max-width: 1200px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.container--big {
+	max-width: 1800px;
 }
 
 a {
@@ -25,4 +31,17 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+svg {
+	width: 20px;
+  height: 20px;
+	transition: fill .3s;
+	}
+
+.title {
+	margin-bottom: 8px;
+	font-family: $dmsans-700;
+	font-size: 36px;
+	color: $black;
 }
