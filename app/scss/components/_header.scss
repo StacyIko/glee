@@ -1,0 +1,183 @@
+
+.header {
+  padding: 50px 0;
+  color: $header;
+	background-color: #ffffff;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+	&__list {
+    display: flex;
+    justify-content: center;
+		margin-left: 8%;
+  }
+
+  &__item {}
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    @extend %rubik-500;
+    line-height: 1;
+		&:hover{
+			text-decoration: underline;
+		}
+
+		&:focus {
+			color: $primary;
+		}
+
+		&:active {
+			color: $home-title;
+		}
+  }
+}
+
+.user-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 318px;
+
+	&__item {
+    height: 50px;
+		position: relative;
+		transition: background-color .3s;
+	}
+
+	svg {
+		width: 20px;
+    height: 16px;
+		fill: $primary;
+		transition: fill .3s;
+	}
+
+	&__item:hover svg {
+		fill: $header;
+	}
+
+	&__item:focus svg {
+		fill: #585858;
+	}
+
+	&__item:active svg {
+		fill: $home-title;
+	}
+
+  &__search,
+  &__menu {
+    display: block;
+    width: 50px;
+    border-radius: 50%;
+		transition: background-color .3s;
+		& svg {
+			position: absolute;
+			top: 50%;
+    	left: 50%;
+			transform: translate(-50%, -50%);
+    	line-height: 50px;
+		}
+  }
+
+  &__search {
+    background-color: #edf1f4;
+    position: relative;
+		transition: background-color .3s;
+
+		&:hover {
+			background-color: #dbe0e2;
+		}
+
+		&:focus, &:active {
+			background-color: #c1c7c9;
+		}
+  }
+
+  &__block {
+    display: flex;
+		align-items: center;
+    width: 178px;
+    height: 50px;
+    border-radius: 22px;
+    background-color: $bg;
+		line-height: 1;
+
+		&:hover {
+			background-color: #fac99f;
+		}
+
+		&:focus, &:active {
+			background-color: #fcbc84;
+		}
+  }
+
+  &__fav {
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+    border-right: 1px solid $bg2;
+    position: relative;
+
+    & svg {
+      position: absolute;
+			bottom: 4px;
+      left: 50%;
+			transform: translateX(-50%);
+    }
+  }
+
+	&__num {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+		right: 26px;
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+  &__cart {
+    display: inline-block;
+    width: 83px;
+    height: 34px;
+    margin: 0 auto;
+    position: relative;
+		& svg {
+      position: absolute;
+			bottom: 4px;
+      left: 50%;
+			transform: translateX(-50%);
+		}
+  }
+    
+  &__menu {
+    background-color: $accent;
+		position: relative;
+
+		&:hover {
+			background-color: #93b9ce;
+		}
+
+		&:focus, &:active {
+			background-color: #7fbee0;
+		}
+		&	svg {
+			fill: #ffffff;
+		}
+
+		&:hover svg {
+			fill: #edf1f4;
+		}
+	}
+}

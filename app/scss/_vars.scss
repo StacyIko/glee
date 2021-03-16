@@ -1,21 +1,38 @@
-$navy: #243f4d;
-$light-navy: #436372;
-$light-blue: #a3bbc8;
-$black: #191919;
-$light-gray: #8b8b8b;
-$gray: #585858;
-$dark-gray: #414141;
-$beige: #fcd7b6;
-$light-beige: #fde5d0;
-$bg: #f8f8f8;
+$primary: #243f4d;
+$header: #436372;
+$accent: #a3bbc8;
+$home-title: #191919;
+$small-text: #8b8b8b;
+$bg: #fcd7b6;
+$bg2: #fde5d0;
 
-$my-gray: #edf1f4;
+$hover-bg: #edf1f4;
 
-$rubik-500: 'Rubik-Medium', sans-serif;
-$rubik-400: 'Rubik-Regular', sans-serif;
-$poppins-700: 'Poppins-Bold', sans-serif;
-$dmsans-400: 'DMSans-Regular', sans-serif;
-$dmsans-500: 'DMSans-Medium', sans-serif;
-$dmsans-700: 'DMSans-Bold', sans-serif;
+%rubik-400 {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+}
 
-$fa-font-path: "../fonts/fontawesome-free/webfonts"
+%rubik-500 {
+	font-family: 'Rubik', sans-serif;
+	font-weight: 500;
+}
+
+%poppins-700 {
+	font-family: 'Poppins', sans-serif;;
+} 
+
+%dmsans-400 {
+	font-family:'DMSans', sans-serif;
+	font-weight: 400;
+}
+
+%dmsans-500 {
+	font-family:'DMSans', sans-serif;
+	font-weight: 500;
+}
+
+%dmsans-700 {
+	font-family:'DMSans', sans-serif;
+	font-weight: 700;
+} 

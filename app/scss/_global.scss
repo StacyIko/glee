@@ -1,8 +1,20 @@
 body {
-	color: $navy;
+	color: $primary;
 	font-size: 16px;
 	line-height: 1.9;
+	@extend %rubik-400;
 	background-color: #ffffff;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	flex: 1 0 auto;
 }
 
 .container {
@@ -39,9 +51,55 @@ svg {
 	transition: fill .3s;
 	}
 
+img {
+	object-fit: contain;
+	object-position: center center;		
+}
+
+.logo__img {
+	max-width: 146px;
+	max-height: 39px;
+}
+
 .title {
 	margin-bottom: 8px;
-	font-family: $dmsans-700;
+	@extend %dmsans-700;
 	font-size: 36px;
-	color: $black;
+	color: $home-title;
 }
+
+a, button {
+	outline-color: $small-text;
+}
+
+.main-btn {
+	font-size: 15px;
+	@extend %rubik-500;
+	line-height: 1;
+	color: #ffffff;
+	background-color: $accent;
+
+	transition: background-color .3s;
+
+	& svg {
+		fill: #ffffff;
+		width: 23px;
+		height: 11px;
+	}
+
+	&:hover {
+			background-color: #93b9ce;
+		}
+
+	&:focus, &:active {
+			background-color: #7fbee0;
+		}
+	&	svg {
+			fill: #ffffff;
+		}
+
+	&:hover svg {
+			fill: #edf1f4;
+		}
+	}
+

@@ -1,0 +1,98 @@
+
+.product-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	grid-gap: 30px;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 27px 45px 32px ;
+	width: 100%;
+	max-width: 270px;
+	min-height: 378px;
+	background-color: #ffffff;
+	@extend %dmsans-500;
+	font-size: 16px;
+	position: relative;
+	box-shadow: 0px 10px 50px 6px rgba(37,37,37,0.05);
+	transition: transform ease .3s;
+
+	&__img {
+		max-width: 186px;
+  	height: 215px;
+		object-fit: contain;
+		object-position: center center;			
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 168px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+
+		opacity: 0;
+		transition: opacity .3s;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+	&:hover &__buttons {
+		opacity: 1;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+
+		background-color: #ffffff;
+		box-shadow: 0px 10px 20px 6px rgba(37,37,37,0.05);
+		transition: background-color .3s;
+		
+		& svg {
+			fill: $accent;
+		}
+
+		&:hover, &:focus {
+			background-color: $hover-bg;
+		}
+
+		&:hover svg {
+			fill: $header;
+		}
+
+		&:focus svg {
+			fill:$accent;
+		}
+
+		&:active {
+			background-color: $accent;
+		}
+
+		&:active svg {
+			fill: #ffffff;
+		}
+	}
+
+	&__heading {
+		margin-top: auto;
+		color: $primary;
+	}
+
+	&__price {
+		color: $accent;
+		@extend %dmsans-700;
+	}
+}
