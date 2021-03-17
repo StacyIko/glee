@@ -119,6 +119,7 @@
 		width: 92px;
 		@extend %dmsans-700;
 		color: #262626;
+		border-bottom: 1px solid transparent;
 
 		& svg {
 			width: 7px;
@@ -128,7 +129,7 @@
 
 		&:hover {
 			color: #747373;
-			border-bottom: 1px solid #747373;
+			border-color:#747373;
 
 		&:hover	svg {
 				fill: #747373;
@@ -225,14 +226,17 @@
 			align-items: center;
 		}
 
-		&__item:not(:last-child) {
-			margin-right: 80px;
+		&__item {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			&:not(:last-child){
+				margin-right: 80px;
+			}
 		}
 
 		&__img {
 			max-width: 150px;
 			max-height: 80px;
 		}
-}
-.container {
 }
