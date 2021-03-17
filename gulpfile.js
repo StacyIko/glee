@@ -83,7 +83,7 @@ function includeHtml() {
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
-	watch(['app/parts/*.html'], includeHtml)
+	watch(['app/html/*.html'], includeHtml)
 	watch(['app/**/*.html']).on('change', browserSync.reload)
 }
 
@@ -96,4 +96,4 @@ exports.cleanDist = cleanDist;
 exports.includeHtml = includeHtml;
 exports.build = series(cleanDist, images, includeHtml, build);
 
-exports.default = parallel(styles, scripts, browsersync, includeHtml,watching);
+exports.default = parallel(styles, includeHtml, scripts, browsersync, watching);

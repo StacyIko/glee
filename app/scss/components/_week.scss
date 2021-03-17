@@ -1,9 +1,12 @@
 .week {
-	display: flex;
-	justify-content: center;
-	padding: 65px 0 185px;
-	text-align: center;
-	@extend %dmsans-700;
+	&__inner {
+		// display: flex;
+		justify-content: center;
+		padding: 65px 0 185px;
+		text-align: center;
+		@extend %dmsans-700;
+	}
+	
 
 	&__filters {
 		display: flex;
@@ -25,6 +28,92 @@
 			color: $home-title;
 		}
 	}
+
+	&__products {
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__product {
+		display: flex;
+		align-items: center;
+		width: 49%;
+		min-width: 766px;
+		height: 100%;
+		min-height: 388px;
+		padding: 50px 140px;
+		color: $primary;
+		background-color: #feefe2;
+		transition: transform ease .3s;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+			margin-bottom: 150px;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	&__img {
+		max-width: 233px;
+		max-height: 405px;
+		margin-top: -100px;
+	}
+
+	&__product-content {
+		display: flex;
+		flex-direction: column;
+		display: inline-block;
+		margin-left: 65px;
+	}
+
+	&__heading {
+		@extend %dmsans-700;
+		margin-bottom: 5px;
+		font-size: 26px;
+	}
+
+	&__subtitle {
+		margin-bottom: 30px;
+	}
+
+	&__view-btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 181px;
+		padding: 20px 15px;
+		border-radius: 5px;
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 1;
+		color: $header;
+		border: 1px solid rgba(67, 99, 114, 0.4);
+
+		transition: background-color .3s;
+		transition: color .3s;
+
+		& svg {
+			fill: $header;
+			transition: fill .3s;
+		}
+
+		&:hover {
+			background-color: $hover-bg;
+			color: $primary;
+
+			& svg {
+				fill: $primary;
+			}
+		}
+	}
 }
 
 .product-cards {
@@ -41,6 +130,7 @@
 	width: 100%;
 	max-width: 270px;
 	min-height: 378px;
+	overflow: hidden;
 	background-color: #ffffff;
 	@extend %dmsans-500;
 	font-size: 16px;
