@@ -5,7 +5,8 @@ $(function() {
 
 	$('.intro').slick({
 		dots: true,
-		arrows: false
+		arrows: false,
+		fade: true
 	});
 
 	$('.partners__items').slick({
@@ -13,18 +14,29 @@ $(function() {
 		arrows: false,
 		slidesToShow: 5,
 		infinite: true,
-		slidesToScroll: 5,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1000
 	});
 
 	var mixer = mixitup('.product-cards', {
 		animation: {
-        duration: 300
+        duration: 300,
+				effects: 'fade translateZ(-100px)'
+    },
+		selectors: {
+      target: '[data-ref="week-card"]',
+			control: '.week__mixitup-control'
     }
 	});
 
 	var mixer = mixitup('.design-cards', {
 		animation: {
-        duration: 300
+      duration: 300
+    },
+		selectors: {
+      target: '[data-ref="design-card"]',
+			control: '.design__mixitup-control'
     }
 	});
 });

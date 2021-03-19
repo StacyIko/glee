@@ -1,39 +1,39 @@
 body {
-	color: $primary;
-	font-size: 16px;
-	line-height: 1.9;
-	@extend %rubik-400;
-	background-color: #ffffff;
-	height: 100%;
+  color: $primary;
+  font-size: 16px;
+  line-height: 1.9;
+  @extend %rubik-400;
+  background-color: #ffffff;
+  height: 100%;
 }
 
 .wrapper {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-	flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .container {
-	width: 100%;
-	max-width: 1200px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 
-.container--big {
-	max-width: 1800px;
+  &--big {
+    max-width: 1800px;
+  }
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .sr-only {
-	position: absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -46,65 +46,115 @@ a {
 }
 
 svg {
-	transition: fill .3s;
-	}
+  transition: fill .3s;
+}
 
 img {
-	object-fit: contain;
-	object-position: center center;		
+  object-fit: contain;
+  object-position: center center;
 }
 
 .logo__img {
-	max-width: 146px;
-	max-height: 39px;
+  width: 146px;
+  height: 39px;
 }
 
 .title {
-	display: inline-block;
-	margin-bottom: 8px;
-	@extend %dmsans-700;
-	font-size: 36px;
-	color: $home-title;
+  display: inline-block;
+  margin-bottom: 8px;
+  @extend %dmsans-700;
+  font-size: 36px;
+  color: $home-title;
 }
 
 .title--center {
-	text-align: center;
+  text-align: center;
 }
 
-a, button {
-	outline-color: $small-text;
-	transition: background-color .3s;
-	transition: color .3s;
+a,
+button {
+  outline-color: $small-text;
+  transition: background-color .3s;
+  transition: color .3s;
 }
 
 .main-btn {
-	font-size: 15px;
-	@extend %rubik-500;
-	line-height: 1;
-	color: #ffffff;
-	background-color: $accent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  @extend %rubik-500;
+  line-height: 1;
+  color: #ffffff;
+  background-color: $accent;
 
-	transition: background-color .3s;
+  transition: background-color .3s;
+  transition: color .3s;
 
-	& svg {
-		fill: #ffffff;
-		width: 23px;
-		height: 11px;
+  svg {
+    fill: #ffffff;
+    width: 23px;
+    height: 11px;
+  }
+
+  &:hover {
+    background-color: #93b9ce;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #7fbee0;
+  }
+
+  svg {
+    fill: #ffffff;
+  }
+
+  &:hover svg {
+    fill: #edf1f4;
+  }
+
+  &--view {
+    max-width: 181px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    color: $header;
+    border: 1px solid rgba(67, 99, 114, 0.4);
+
+    svg {
+      fill: $header;
+      width: 25px;
+      height: 11px;
+      transition: fill .3s;
+    }
+
+    &:hover {
+      background-color: $hover-bg;
+      color: $primary;
+
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+
+	&--shop {
+  	max-width: 200px;
+  	padding: 22px 18px 22px 28px;
 	}
+}
 
-	&:hover {
-			background-color: #93b9ce;
-		}
+.circle-btn {
+  display: block;
+  width: 50px;
+  border-radius: 50%;
+  transition: background-color .3s;
 
-	&:focus, &:active {
-			background-color: #7fbee0;
-		}
-	&	svg {
-			fill: #ffffff;
-		}
-
-	&:hover svg {
-			fill: #edf1f4;
-		}
-	}
-
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+  }
+}

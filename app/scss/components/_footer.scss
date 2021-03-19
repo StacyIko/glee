@@ -3,9 +3,6 @@
 	font-size: 14px;
 	color: #7b7b7b;
 
-	&__inner {
-	}
-
 	&__top {
 		padding: 80px 0 50px;
 		display: flex;
@@ -22,7 +19,6 @@
 		max-width: 200px;
 		margin-right: 100px;
 		margin-top: 14px;
-		font-style: normal;
 
 		& span {
 			text-transform: uppercase;
@@ -60,13 +56,13 @@
 	}
 
 	&__input {
-	margin-right: -4px;
-	width: 170px;
-	padding: 10px 12px;
-	background-color: #fef7f0;
-	line-height: 1;
-	color: #234969;
-	outline-color: $small-text;
+		margin-right: -4px;
+		width: 170px;
+		padding: 10px 12px;
+		background-color: #fef7f0;
+		line-height: 1;
+		color: #234969;
+		outline-color: $small-text;
 
 	&::placeholder {
 		@extend %dmsans-400;
@@ -86,6 +82,7 @@
 }
 
 .main-btn--subscribe {
+	display: inline-block;
 	height: 36px;
 	padding: 0 12px;
 	@extend %dmsans-400;

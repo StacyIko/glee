@@ -7,6 +7,7 @@ $bg: #fcd7b6;
 $bg2: #fde5d0;
 
 $hover-bg: #edf1f4;
+$hover-text: #747373;
 
 %rubik-400 {
 	font-family: 'Rubik', sans-serif;
@@ -36,3 +37,10 @@ $hover-bg: #edf1f4;
 	font-family:'DMSans', sans-serif;
 	font-weight: 700;
 } 
+
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}
