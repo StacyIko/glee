@@ -30,6 +30,19 @@ $(function() {
     }
 	});
 
+	$('.burger, .header__nav a').on('click', function () {
+		$('.header__nav').toggleClass('header__nav--active');
+	})
+
+	$(window).on("scroll", function (event) {
+		var scroll = $(window).scrollTop();
+		if (scroll > 200) {
+			$(".user-nav").css("opacity", "0");
+		} else {
+			$(".user-nav").css("opacity", "1");
+		}
+	});
+
 	var mixer = mixitup('.design-cards', {
 		animation: {
       duration: 300

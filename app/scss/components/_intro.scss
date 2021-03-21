@@ -1,6 +1,10 @@
 .intro {
   background-color: $bg;
 
+  @media (max-width: 767.98px) {
+    padding-top: 110px;
+  }
+
   &__item {
     padding-top: 3em;
     font-size: 72px;
@@ -16,9 +20,13 @@
     align-items: center;
   }
 
+  &__text {
+    max-width: 414px;
+
+  }
+
   &__title {
     display: block;
-    max-width: 414px;
     margin-bottom: 20px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -45,19 +53,26 @@
   }
 
   &__img-box {
-    position: relative;
+		display: flex;
+		flex: 1 0 auto;
+    width: 100%;
+    max-width: 634px;
+		height: 100%;
+    max-height: 634px;
     z-index: 2;
+    position: relative;
+
 
     &::before {
       content: '';
       display: block;
-			width: 100%;
-      max-width: 634px;
-			height: 100%;
-      max-height: 634px;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      top: -187px;
-      right: -130px;
+      top: 50%;
+      left: 19%;
+      transform: translateY(-50%);
+      z-index: -1;
       z-index: 1;
       border-radius: 50%;
       background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgb(255, 255, 255));
@@ -67,14 +82,14 @@
     }
   }
 
-  &__img-box {
-    max-width: 640px;
-    max-height: 640px;
-  }
-
   &__img {
     position: relative;
     z-index: 2;
+  }
+
+	&__shape {
+		width: 634px;
+		height: 634px;
 	}
 }
 
@@ -87,8 +102,8 @@
   &__item {
     display: flex;
     flex-direction: column;
-    align-items: center;   
-		padding: 0 10px; 
+    align-items: center;
+    padding: 0 10px;
     width: 100%;
     max-width: 570px;
     position: relative;
@@ -97,7 +112,7 @@
 
   &__content {
     display: block;
-		padding-left: 79px;
+    padding-left: 79px;
     position: relative;
 
     &::before {

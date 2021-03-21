@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-gap: 30px;
+	grid-gap: 40px 30px;
+	grid-auto-columns: 270px;
+	justify-items: center;
 }
 
 .product-card {
@@ -60,7 +63,7 @@
     box-shadow: 0px 10px 20px 6px rgba(37, 37, 37, 0.05);
     transition: background-color .3s;
 
-    svg {
+    & svg {
       width: 20px;
       height: 16px;
     }
