@@ -5,6 +5,10 @@ body {
   @extend %rubik-400;
   background-color: #ffffff;
   height: 100%;
+
+	@media (max-width: $screen-xs) {
+		line-height: 1.5;
+	}
 }
 
 .wrapper {
@@ -22,6 +26,10 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+
+  @media (max-width: $screen-s) {
+    max-width: 630px;
+  }
 
   &--big {
     max-width: 1800px;
@@ -55,12 +63,21 @@ img {
 }
 
 .logo {
-	flex-shrink: 0;
+  flex-shrink: 0;
+	display: flex;
+	justify-content: center;
 }
+
 .logo__img {
   width: 146px;
   height: 39px;
-	object-fit: cover;
+  object-fit: cover;
+
+	@media (max-width: $screen-xs) {
+		width: 100%;
+		max-width: 100px;
+		height: auto;
+	}
 }
 
 .title {
@@ -69,6 +86,10 @@ img {
   @extend %dmsans-700;
   font-size: 36px;
   color: $home-title;
+
+	@media (max-width: $screen-xs) {
+		font-size: 30px;
+	}
 }
 
 .title--center {
@@ -119,12 +140,13 @@ button {
   }
 
   &--view {
+    width: 100%;
     max-width: 181px;
     padding: 20px 15px;
     border-radius: 5px;
     color: $header;
     border: 1px solid rgba(67, 99, 114, 0.4);
-		background-color: transparent;
+    background-color: transparent;
 
     svg {
       fill: $header;
@@ -143,10 +165,16 @@ button {
     }
   }
 
-	&--shop {
-  	max-width: 200px;
-  	padding: 22px 18px 22px 28px;
-	}
+  &--shop {
+    width: 100%;
+    max-width: 200px;
+    padding: 22px 18px 22px 28px;
+
+    @media (max-width: $screen-xs) {
+      max-width: 150px;
+      padding: 15px;
+    }
+  }
 }
 
 .circle-btn {

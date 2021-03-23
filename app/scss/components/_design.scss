@@ -1,12 +1,22 @@
+.design {
+	padding-top: 87px 0 109px;
+	@media (max-width: $screen-s) {
+		padding: 50px 0;
+	}
+}
 .design-cards {
-	margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   grid-gap: 30px;
-  padding-bottom: 109px;
+	justify-items: center;
+
+	@media (max-width: $screen-s) {
+		grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	}
 }
 
 .design-card {
+	display: flex;
   flex-direction: row;
   align-items: stretch;
   min-height: 245px;
@@ -17,10 +27,29 @@
 
   background-color: #f1efef;
 
+	@media (max-width: $screen-s) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		min-height: 270px;
+	}
+
+	@media (max-width: $screen-xs) {
+		width: 90%;
+	}
+
   &__content {
     width: 40%;
     min-width: 150px;
 		text-align: left;
+
+		@media (max-width: $screen-s) {
+			text-align: center;
+			margin-bottom: 10px;
+			width: 100%;
+			min-width: auto;
+		}
   }
 
   a {
@@ -37,6 +66,11 @@
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: auto;
+
+		@media (max-width: $screen-s) {
+			background-position: center center;
+    background-size: contain;
+		}
   }
 
   &:hover {
@@ -55,6 +89,10 @@
   background-size: cover;
   background-position: center center;
   transition: filter .3s;
+
+	@media (max-width: $screen-s) {
+		height: 250px;
+	}
 
   &__link {
     display: flex;
@@ -75,6 +113,11 @@
     position: relative;
     z-index: 3;
 
+		@media (max-width: $screen-s) {
+			width: 80px;
+    	height: 80px;
+		}
+
     &::before {
       content: '';
       display: block;
@@ -83,9 +126,16 @@
       border-radius: 50%;
       background-color: rgba(163, 187, 200, 0.4);
       position: absolute;
-      top: -13%;
-      left: -13%;
+      top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+      // left: -13%;
       z-index: 2;
+
+			@media (max-width: $screen-s) {
+				width: 100px;
+				height: 100px;
+			}
     }
 
     & svg {
@@ -110,16 +160,20 @@
 .blog {
   padding-top: 115px;
 
+	@media (max-width: $screen-s) {
+		padding-top: 50px;
+	}
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 45px;
+		flex-wrap: wrap;
+    margin-bottom: 16px;
   }
 
   &__title {
-    margin-bottom: 0;
-    padding: 0;
+		margin-right: 30px;
   }
 
   &__btn {
@@ -149,13 +203,20 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     grid-gap: 30px;
+		justify-items: center;
+
+		@media (max-width: $screen-s) {
+			padding-top: 50px;
+			grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+		}
   }
 }
 
 .blog-article {
   border-top: 10px;
+	width: 100%;
   max-width: 370px;
   background-color: white;
   box-shadow: 0px 10px 50px 6px rgba(37, 37, 37, 0.05);
@@ -177,11 +238,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		min-height: 231px;
-		// height: 100%;
-		max-height: 231px;
+		// max-height: 231px;
     margin-top: -15px;
-    padding: 0 25px 25px;
+    padding: 0 30px 25px;
+		line-height: 1.2;
   }
 
   &__tag {
@@ -202,7 +262,8 @@
 
   &__title {
 		flex: 1 0 auto;
-    padding: 20px 0 15px;
+    padding: 11px 0 0;
+		margin-bottom: 18px;
 		display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -232,10 +293,9 @@
 
   height: 436px;
   width: 100%;
-  padding-top: 250px;
+  padding-top: 270px;
   padding-bottom: 80px;
   margin-top: -172px;
-  // position: relative;
   z-index: -1;
   background-color: #fef7f0;
 
@@ -245,15 +305,18 @@
     justify-content: center;
     align-items: center;
     min-width: 0;
-  }
-
-  &__wrapper {}
+	}
 
   &__item {
     display: flex !important;
     justify-content: center;
     align-items: center;
-  }
+		margin-right: 20px;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+
 
   &__img {
     width: 100%;
@@ -262,7 +325,7 @@
     max-height: 80px;
   }
 }
-
+}
 .slick-track {
   display: flex;
   justify-content: space-around;

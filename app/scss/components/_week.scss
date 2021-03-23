@@ -1,36 +1,64 @@
 .week {
+	padding-top: 50px;
+
   &__inner {
-    // display: flex;
-    justify-content: center;
-    padding: 60px 0 185px;
     text-align: center;
     @extend %dmsans-700;
   }
 
-  &__products {}
+  &__products {
+		padding-top: 185px;
+		@media (max-width: $screen-s) {
+			padding-top: 50px;
+		}
+	}
 
   &__wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(870px, 1fr));
+		grid-gap: 200px 30px;
+    justify-items: center;
+
+		@media (max-width: $screen-m) {
+			grid-template-columns: 1fr;
+			grid-gap: 200px 30px;
+		}
+
+		@media (max-width: $screen-s) {
+			grid-row-gap: 50px;
+		}
   }
 
   &__product {
     display: flex;
     align-items: center;
-    width: 49%;
-    min-width: 766px;
+    width: 100%;
+    max-width: 870px;
     height: 100%;
     min-height: 388px;
     padding: 50px 140px;
-		margin-bottom: 150px;
     color: $primary;
     background-color: #feefe2;
     transition: transform ease .3s;
     position: relative;
+		// margin-right: 30px;	
+		// margin-bottom: 200px;
 
+		@media (max-width: $screen-m) {
+			padding: 10px 50px;
+		}
+
+		@media (max-width: $screen-s) {
+			min-height: auto;
+			padding: 40px 50px;
+		}
+
+		@media (max-width: $screen-xs) {
+			flex-direction: column;
+			justify-content: center;
+			padding: 40px 20px;
+		}
     &:not(:last-child) {
-      margin-right: 30px;	
     }
 
     &:hover {
@@ -38,17 +66,37 @@
     }
   }
 
-  &__img {
+	&__product-link {
+		width: 100%;
     max-width: 233px;
+		height: 100%;
     max-height: 405px;
-    margin-top: -100px;
+		@media (max-width: $screen-xs) {
+			max-height: 200px;
+			margin-bottom: 20px;
+		}
+	}
+  &__img {
+		width: 100%;
+    max-width: 233px;
+		height: 100%;
+    margin-top: -170px;
+
+		@media (max-width: $screen-s) {
+			margin-top: 0;
+		}
   }
 
   &__product-content {
     display: flex;
     flex-direction: column;
-    display: inline-block;
     margin-left: 65px;
+
+		@media (max-width: $screen-xs) {
+			margin-left: 0;
+			text-align: center;
+			align-items: center;
+		}
   }
 
   &__heading {
@@ -74,10 +122,21 @@
   display: flex;
   justify-content: center;
   margin-bottom: 76px;
+
+	@media (max-width: $screen-s) {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 50px;
+	}
 }
 
 .filter:not(:last-child) {
   margin-right: 30px;
+	@media (max-width: $screen-s) {
+		margin-right: 0;
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
 }
 
 .filter {
