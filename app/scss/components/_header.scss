@@ -11,9 +11,10 @@
 	}
 
 	@media (max-width: $screen-s) {
-    .container {
+  	.container {
       padding: 0;
-    }
+ 		 }
+	}
 
   @media (max-width: $screen-s) {
     position: fixed;
@@ -48,6 +49,7 @@
     justify-content: center;
     margin-left: 8%;
 
+		@media (max-width: $screen-s) {
       margin-left: 0;
       transform: translateY(-200%);
       padding: 110px 0 8%;
@@ -84,7 +86,7 @@
   }
 
   &__link {
-    @extend %rubik-500;
+    // @extend %rubik-500;
     line-height: 1;
 
     &:hover {
