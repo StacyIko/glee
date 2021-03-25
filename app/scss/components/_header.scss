@@ -1,28 +1,22 @@
 .header {
   color: $header;
-  background-color: #ffffff;
+  // background-color: #ffffff;
 
-	.logo {
-		padding-left: 15px;
-	}
+  .logo {
+    padding-left: 15px;
+		@media (max-width: $screen-s) {
+			z-index: 2;
+		}
+  }
 
-	.burger {
-		padding-right: 15px;
-	}
-
-	@media (max-width: $screen-s) {
-  	.container {
-      padding: 0;
- 		 }
-	}
+  .burger {
+    padding-right: 15px;
+  }
 
   @media (max-width: $screen-s) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background-color: #ffffff;
+    .container {
+      padding: 0;
+    }
   }
 
   &__nav {
@@ -31,16 +25,33 @@
     align-items: center;
     padding: 50px 0;
     flex-wrap: wrap;
+    position: relative;
+
+
+    &::before {
+      @media (max-width: $screen-s) {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+				background-color: #fff;
+      }
+    }
 
     @media (max-width: $screen-l) {
       padding: 20px 0;
     }
 
     @media (max-width: $screen-s) {
-      padding: 10px 0;
-      height: 60px;
-      position: relative;
-      z-index: 2;
+			padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background-color: #ffffff;
     }
   }
 
@@ -49,13 +60,16 @@
     justify-content: center;
     margin-left: 8%;
 
-		@media (max-width: $screen-s) {
+    @media (max-width: $screen-s) {
       margin-left: 0;
       transform: translateY(-200%);
-      padding: 110px 0 8%;
+			padding-top: 140px;
+      // padding: 140px 0 8%;
       flex-direction: column;
-      flex-wrap: wrap;
-      position: absolute;
+			align-items: center;
+			justify-content: space-around;
+      // flex-wrap: wrap;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -63,7 +77,11 @@
       text-align: center;
       background-color: #ffffff;
       min-height: 100vh;
-      width: 100vw;
+			max-height: 800px;
+			overflow-y: auto;
+			// height: auto;
+      width: 100%;
+			// max-width: 100vw;
       transition: transform .3s ease;
     }
   }
@@ -73,7 +91,9 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      flex: 1 0 44px;
+			// padding: 10px 0;
+      // flex: 1 0 44px;
+			width: 100%;
     }
   }
 
@@ -86,7 +106,7 @@
   }
 
   &__link {
-    // @extend %rubik-500;
+    @extend %rubik-500;
     line-height: 1;
 
     &:hover {
@@ -106,9 +126,9 @@
       align-items: center;
       justify-content: center;
       flex: 1;
-      padding: 0;
+      padding: 40px 0;
       font-size: 20px;
-			transition: background-color .3s;
+      transition: background-color .3s;
 
       &:hover {
         background-color: $hover-bg;
@@ -120,11 +140,13 @@
 .user-nav {
   display: flex;
   align-items: center;
-  width: 318px;
+  width: 100%;
+  max-width: 318px;
   background-color: #fff;
   transition: opacity .3s ease;
 
   @media (max-width: $screen-l) {
+    max-width: none;
     width: 100%;
     justify-content: flex-end;
     padding-top: 20px;
@@ -132,10 +154,15 @@
 
   @media (max-width: $screen-s) {
     z-index: 2;
-    padding: 10px 0;
+    padding: 0 15px 15px 0;
     position: absolute;
-    top: 50px;
+    top: 59px;
     z-index: 1;
+  }
+
+  @media (max-width: $screen-xs) {
+    justify-content: center;
+		padding: 0 0 15px;
   }
 
   &__item {

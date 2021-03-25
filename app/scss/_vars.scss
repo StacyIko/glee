@@ -14,6 +14,17 @@ $screen-m: 991px;
 $screen-s: 768px;
 $screen-xs: 576px;
 
+@mixin font($ff, $fw) {
+	font-family: $ff, sans-serif;
+	font-weight: $fw;
+}
+
+@mixin a($width) {
+	@media only screen and (max-width: $width + "px") {
+		@content;
+	}
+}
+
 %rubik-400 {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 400;

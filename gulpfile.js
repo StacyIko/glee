@@ -72,7 +72,7 @@ function cleanDist() {
 }
 
 function includeHtml() {
-	return src('app/html/index.html')
+	return src('app/html/**/*.html')
 	.pipe(fileinclude({
       prefix: '@',
       basepath: '@file'
@@ -84,8 +84,8 @@ function includeHtml() {
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
-	watch(['app/html/*.html'], includeHtml)
-	watch(['app/**/*.html']).on('change', browserSync.reload)
+	watch(['app/html/**/*.html'], includeHtml)
+	watch(['app/**/**/*.html']).on('change', browserSync.reload)
 }
 
 exports.styles = styles;

@@ -1,0 +1,133 @@
+.blog {
+  padding-top: 115px;
+
+	@media (max-width: $screen-s) {
+		padding-top: 50px;
+	}
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+		flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+		display: inline-block;
+		margin-right: 30px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92px;
+    @extend %dmsans-700;
+    color: #262626;
+    border-bottom: 1px solid transparent;
+
+    svg {
+      width: 7px;
+      height: 15px;
+      fill: #262626;
+    }
+
+    &:hover {
+      color:$hover-text;
+      border-color: $hover-text;
+
+      &:hover svg {
+        fill: $hover-text;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-gap: 30px;
+		justify-items: center;
+
+		@media (max-width: $screen-s) {
+			padding-top: 50px;
+			grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+		}
+  }
+}
+
+.blog-article {
+  border-top: 10px;
+	width: 100%;
+  max-width: 370px;
+	max-height: 415px;
+  background-color: white;
+  box-shadow: 0px 10px 50px 6px rgba(37, 37, 37, 0.05);
+
+  transition: transform ease .3s;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+  
+  &__img {
+    object-fit: cover;
+		border-radius: 5px 5px 0 0;
+		width: 100%;
+    max-width: 370px;
+    max-height: 350px;
+  }
+
+  &__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-top: -25px;
+		// max-height: 231px;
+    padding: 0 30px 25px;
+		line-height: 1.2;
+  }
+
+  &__tag {
+    display: block;
+		padding: 8px 35px;
+		align-self: flex-start;
+    border-radius: 13px;
+    text-align: center;
+    background-color: $accent;
+    color: white;
+    text-transform: uppercase;
+    @extend %poppins-700;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+		flex: 1 0 auto;
+    padding: 11px 0 0;
+		margin-bottom: 18px;
+		display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @extend %dmsans-500;
+    font-size: 18px;
+    color: #262626;
+  }
+
+  &__bottom {
+		margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    @extend %rubik-400;
+    font-size: 12px;
+    color: #222933;
+  }
+
+  &__author {
+		display: inline-block;
+    padding-left: 43px;
+    font-style: normal;
+  }
+}

@@ -64,6 +64,7 @@ $(function() {
 
 	var mixer = mixitup('.product-cards', {
 		animation: {
+			duration: 300,
       effects: "fade translateZ(-100px)"
     },
 		selectors: {

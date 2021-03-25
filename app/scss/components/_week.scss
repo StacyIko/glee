@@ -79,11 +79,11 @@
   &__img {
 		width: 100%;
     max-width: 233px;
-		height: 100%;
     margin-top: -170px;
 
 		@media (max-width: $screen-s) {
 			margin-top: 0;
+			height: 100%;
 		}
   }
 

@@ -1,10 +1,14 @@
 .product-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 30px;
 	grid-gap: 40px 30px;
 	grid-auto-columns: 270px;
 	justify-items: center;
+
+	&__item {
+		display: flex;
+		width: 100%;
+	}
 }
 
 .product-card {
@@ -14,7 +18,7 @@
   padding: 27px 45px 32px;
   width: 100%;
   max-width: 270px;
-  min-height: 378px;
+  // min-height: 378px;
   overflow: hidden;
   background-color: #ffffff;
   @extend %dmsans-500;
@@ -99,7 +103,7 @@
     color: $primary;
   }
 
-  &__price {
+  &__price, &__category {
     color: $accent;
     @extend %dmsans-700;
   }
