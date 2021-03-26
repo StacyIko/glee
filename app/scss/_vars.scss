@@ -5,7 +5,7 @@ $home-title: #191919;
 $small-text: #8b8b8b;
 $bg: #fcd7b6;
 $bg2: #fde5d0;
-
+$border: rgba(9, 49, 111, 0.1);
 $hover-bg: #edf1f4;
 $hover-text: #747373;
 
@@ -14,13 +14,15 @@ $screen-m: 991px;
 $screen-s: 768px;
 $screen-xs: 576px;
 
+$shadow: 0px 10px 50px 6px rgba(37, 37, 37, 0.05);
+
 @mixin font($ff, $fw) {
 	font-family: $ff, sans-serif;
 	font-weight: $fw;
 }
 
 @mixin a($width) {
-	@media only screen and (max-width: $width + "px") {
+	@media only screen and (max-width: $width+ "px") {
 		@content;
 	}
 }
