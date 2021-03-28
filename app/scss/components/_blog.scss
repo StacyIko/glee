@@ -51,7 +51,7 @@
 
 		@media (max-width: $screen-s) {
 			padding-top: 50px;
-			grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 		}
   }
 }
@@ -67,7 +67,7 @@
   transition: transform ease .3s;
 
   &:hover {
-    transform: scale(1.01);
+    transform: translateY(-1%);
   }
   
   &__img {
@@ -83,9 +83,12 @@
 		flex-direction: column;
 		justify-content: space-between;
 		margin-top: -25px;
-		// max-height: 231px;
     padding: 0 30px 25px;
 		line-height: 1.2;
+
+		@include a(576) {
+			padding: 0 15px 15px;
+		}
   }
 
   &__tag {
@@ -123,11 +126,46 @@
     @extend %rubik-400;
     font-size: 12px;
     color: #222933;
+
+		@include a(576) {
+			display: flex;
+			justify-content: space-between;
+		}
   }
+
+	&__time, &__author {
+		padding-left: 20px;
+		position: relative;
+		&::before {
+			content: '';
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			left: 0;
+			top: 0;			
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&__time {
+		
+		&::before {
+			background-image: url('../../images/icons/calendar.svg');
+		}
+	}
 
   &__author {
 		display: inline-block;
-    padding-left: 43px;
+    margin-left: 43px;
     font-style: normal;
+
+		@include a(576) {
+			margin-left: 0;
+		}
+
+		&::before {
+			background-image: url('../../images/icons/person.svg');
+		}
   }
 }

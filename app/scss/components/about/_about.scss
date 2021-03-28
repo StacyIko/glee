@@ -42,7 +42,7 @@
     }
   }
 
-  &__img-box {
+  &__bg {
     grid-area: img-box;
     display: flex;
     width: 100%;
@@ -97,8 +97,6 @@
 
   &__text-block {
     grid-area: text-block;
-
-    @include a(991) {}
   }
 
   &__text {
@@ -175,15 +173,15 @@
     }
 
     &--1::before {
-      background-image: url('../../../images/about/icons/project.svg');
+      background-image: url('../images/about/icons/project.svg');
     }
 
     &--2::before {
-      background-image: url('../../../images/about/icons/speaker.svg');
+      background-image: url('../images/about/icons/speaker.svg');
     }
 
     &--3::before {
-      background-image: url('../../../images/about/icons/award.svg');
+      background-image: url('../images/about/icons/award.svg');
     }
   }
 
@@ -251,19 +249,19 @@
     }
 
     &--1::before {
-      background-image: url('../../../images/about/icons/rate.svg');
+      background-image: url('../images/about/icons/rate.svg');
     }
 
     &--2::before {
-      background-image: url('../../../images/about/icons/delivery.svg');
+      background-image: url('../images/about/icons/delivery.svg');
     }
 
     &--3::before {
-      background-image: url('../../../images/about/icons/work-time.svg');
+      background-image: url('../images/about/icons/work-time.svg');
     }
 
     &--4::before {
-      background-image: url('../../../images/about/icons/star-award.svg');
+      background-image: url('../images/about/icons/star-award.svg');
     }
 
     &::after {
@@ -287,10 +285,6 @@
       left: 50%;
     }
   }
-
-  &__number {}
-
-  &__text {}
 }
 
 .team {
@@ -321,7 +315,6 @@
 		}
 
 		@include a(576) {
-			text-align: center;
 			justify-content: center;
 			width: 100%;
 		}
@@ -334,6 +327,7 @@
   &__btn {
     padding: 15px;
     max-width: 170px;
+		transition: background-color .3s;
 
 		@include a(576) {
 			margin: 0 auto;
@@ -406,7 +400,7 @@
     justify-content: space-around;
   }
 
-  &__social-link {
+  &__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -442,11 +436,3 @@
     }
   }
 }
-
-.container {}
-
-.title {}
-
-.title--primary {}
-
-.main-btn {}

@@ -7,6 +7,7 @@
 
 	&__item {
 		display: flex;
+		justify-content: center;
 		width: 100%;
 	}
 }
@@ -27,6 +28,10 @@
   box-shadow: 0px 10px 50px 6px rgba(37, 37, 37, 0.05);
   // transition: transform ease .3s;
 
+	@include a(567) {
+		max-width: none;
+		width: 90%;
+	}
   &__img {
     max-width: 186px;
     height: 215px;
@@ -48,7 +53,7 @@
   }
 
   &:hover {
-    transform: scale(1.1);
+    transform: translateY(-1%);
   }
 
   &:hover &__buttons {

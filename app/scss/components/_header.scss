@@ -5,7 +5,7 @@
   .logo {
     padding-left: 15px;
 		@media (max-width: $screen-s) {
-			z-index: 2;
+			z-index: 3;
 		}
   }
 
@@ -63,22 +63,20 @@
     @media (max-width: $screen-s) {
       margin-left: 0;
       transform: translateY(-200%);
-			padding-top: 140px;
-      // padding: 140px 0 8%;
+			padding-top: 50px;
       flex-direction: column;
 			align-items: center;
 			justify-content: space-around;
-      // flex-wrap: wrap;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      z-index: -1;
+      z-index: 2;
       text-align: center;
       background-color: #ffffff;
-      height: 100vh;
+      min-height: 100vh;
+			height: 600%;
 			overflow-y: auto;
-			// height: auto;
       width: 100%;
 			// max-width: 100vw;
       transition: transform .3s ease;
@@ -124,10 +122,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex: 1;
-      padding: 40px 0;
+      // flex: 1;
+      padding: 20px 0;
       font-size: 20px;
       transition: background-color .3s;
+			z-index: 2;
 
       &:hover {
         background-color: $hover-bg;
@@ -152,7 +151,6 @@
   }
 
   @media (max-width: $screen-s) {
-    z-index: 2;
     padding: 0 15px 15px 0;
     position: absolute;
     top: 59px;

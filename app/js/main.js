@@ -47,9 +47,20 @@ $(function() {
 	});
 
 	// Спойлер
-	$('.footer__heading-js').on('click', function () {
-		$(this).toggleClass('footer__heading-js--active').next().slideToggle(300);
-	});
+	// $('.footer__heading-js').on('click', function () {
+	// 	if ($(window).width() <= 576) {
+	// 			$(this).toggleClass('footer__heading-js--active').next().slideToggle(300);
+	// 		} else {
+	// 			$('.footer__list').css("display", "block");
+	// 		}
+	// 	})
+	// if ($(window).width() <= 576) {
+	// 	$('.footer__heading-js').on('click', function () {
+	// 		$(this).toggleClass('footer__heading-js--active').next().slideToggle(300);
+	// 	})} else {
+	// 			$('.footer__list').css("display", "block");
+	// 	}
+	
 
 	var mixer = mixitup('.design-cards', {
 		animation: {
