@@ -1,0 +1,503 @@
+<section class="catalog">
+	<div class="container">
+		<div class="catalog__inner">
+			<h2 class="sr-only">Products catalog</h2>
+			<ul class="filter-items">
+				<li class="filter-item filter-category">
+					<h3 class="filter-item__title">Category</h3>
+					<form class="filter-item__form" action="#">
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox" checked>
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Chair</span>
+								<svg class="filter-item__icon">
+									<use xlink:href='#arrow-right' />
+								</svg>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Table</span>
+								<svg class="filter-item__icon">
+									<use xlink:href='#arrow-right' />
+								</svg>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Lamp</span>
+								<svg class="filter-item__icon">
+									<use xlink:href='#arrow-right' />
+								</svg>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Watch</span>
+								<svg class="filter-item__icon">
+									<use xlink:href='#arrow-right' />
+								</svg>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Clock</span>
+								<svg class="filter-item__icon">
+									<use xlink:href='#arrow-right' />
+								</svg>
+							</div>
+						</label>
+					</form>
+				</li>
+
+				<li class="filter-item filter-price">
+					<h3 class="filter-item__title">Price</h3>
+					<form class="filter-item__form" action="#">
+						<label class="sr-only" for="price">
+							Choose price
+						</label>
+						<input class="filter-item__input filter-price__input" id="price" type="text" data-type="double" data-min="0"
+							data-max="1000" data-from="100" data-to="500">
+						<label class="filter-price__label">
+							<p>$<span class="filter-price__from"></span></p>
+							<p>$<span class="filter-price__to"></span></p>
+						</label>
+					</form>
+				</li>
+
+				<li class="filter-item filter-brand">
+					<h3 class="filter-item__title">Brand</h3>
+					<form class="filter-item__form" action="#">
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox" checked>
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">RFL</span>
+								<span class="filter-item__text">(10)</span>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Brothers</span>
+								<span class="filter-item__text">(21)</span>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Regal</span>
+								<span class="filter-item__text">(3)</span>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Nadia</span>
+								<span class="filter-item__text">(14)</span>
+							</div>
+						</label>
+						<label class="filter-item__label">
+							<input class="filter-item__input sr-only" type="checkbox">
+							<div class="filter-item__checkbox">
+								<span class="filter-item__text">Otobi</span>
+								<span class="filter-item__text">(6)</span>
+							</div>
+						</label>
+					</form>
+				</li>
+
+				<li class="filter-item recent">
+					<h3 class="filter-item__title recent__title">Recent products</h3>
+					<ul class="recent__items">
+						<li class="recent__item">
+							<div class="recent__img-box">
+								<img class="recent__img" src="images/catalog/recent-1.jpg" alt="recent product 1">
+							</div>
+							<div class="recent__content">
+								<h4 class="recent__heading">Pendant lamp</h4>
+								<div class="recent__stars" data-rateyo-rating="4.3"></div>
+								<p class="recent__price">23<span>$</span></p>
+							</div>
+						</li>
+
+						<li class="recent__item">
+							<div class="recent__img-box">
+								<img class="recent__img" src="images/catalog/recent-2.jpg" alt="recent product 1">
+							</div>
+							<div class="recent__content">
+								<h4 class="recent__heading">Pendant lamp</h4>
+								<div class="recent__stars" data-rateyo-rating="4.8"></div>
+								<p class="recent__price">23<span>$</span></p>
+							</div>
+						</li>
+
+						<li class="recent__item">
+							<div class="recent__img-box">
+								<img class="recent__img" src="images/catalog/recent-3.jpg" alt="recent product 1">
+							</div>
+							<div class="recent__content">
+								<h4 class="recent__heading">Pendant lamp</h4>
+								<div class="recent__stars" data-rateyo-rating="4"></div>
+								<p class="recent__price">23<span>$</span></p>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<div class="catalog__content">
+				<ul class="catalog__cards">
+					<li class="product-cards__item  mix chair">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-1.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">Wooden radio</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="product-cards__item  mix table">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-2.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">Wooden chair</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="product-cards__item  mix lamp">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-3.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">White chair</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="product-cards__item  mix watch">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-4.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">White chair</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="product-cards__item  mix clock">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-5.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">Wooden radio</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="product-cards__item  mix chair">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-6.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">Wooden radio</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="product-cards__item  mix table">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-7.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">Wooden radio</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+					<li class="product-cards__item  mix lamp">
+						<article class="product-card">
+							<a class="product-card__link" href="#">
+								<img class="product-card__img" src="images/product-8.png" alt="product-1">
+							</a>
+							<div class="product-card__content">
+								<h3 class="product-card__heading">Wooden radio</h3>
+								<div class="product-card__stars" data-rateyo-rating="4"></div>
+								<div class="product-card__price">
+									<span>$</span>29
+								</div>
+								<div class="product-card__text">
+									<p>
+										consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+										enim ad minim
+										veniam, quis nostrud exercitation
+									</p>
+								</div>
+								<div class="product-card__buttons">
+									<a class="product-card__button product-card__button--search" href="#">
+										<svg>
+											<use xlink:href='#search' />
+										</svg>
+										<span class="sr-only">search for products</span>
+									</a>
+									<button class="product-card__button product-card__button--cart" type="button">
+										<span>add to cart</span>
+										<svg>
+											<use xlink:href='#cart' />
+										</svg>
+									</button>
+									<button class="product-card__button" type="button">
+										<svg>
+											<use xlink:href='#heart' />
+										</svg>
+										<span class="sr-only">add to my favourite products</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul>
+				<div class="pagination">
+					<a class="pagination__arrows pagination__prev" href="#">Prev</a>
+					<ul class="pagination__list">
+						<li class="pagination__item">
+							<span class="pagination__link" href="#">1</span>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">2</a>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">3</a>
+						</li>
+					</ul>
+					<a class="pagination__item pagination__arrows pagination__next" href="#">Next</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</section>

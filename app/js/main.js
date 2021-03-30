@@ -1,7 +1,39 @@
 $(function() {
-	// $('.burger, .menu a').on('click', function () {
-	// 	$('.menu').toggleClass('menu--active');
-	// })
+	$('.filter-item__title').on('click', function () {
+		$(this).toggleClass('filter-item__title--active').next().slideToggle(300);
+		})
+	$('.user-nav__menu').on('click', function () {
+		$('.catalog__cards').toggleClass('catalog__cards--list');
+	})
+
+	$(".recent__stars").rateYo({
+		normalFill: "#d6d6d6",
+		ratedFill: "#ffcc00",
+		starWidth: "10px",
+		spacing   : "6px",
+		readOnly: true
+  });
+
+	$(".product-card__stars").rateYo({
+		normalFill: "#d6d6d6",
+		ratedFill: "#ffcc00",
+		starWidth: "18px",
+		spacing   : "12px",
+		readOnly: true
+  });
+
+	$('.filter-price__input').ionRangeSlider({
+		prefix: "$",
+		onStart: function (data) {
+			$('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+		},
+		onChange: function (data) {    
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+	}
+	);
 	$('.intro').slick({
 		dots: true,
 		arrows: false,
