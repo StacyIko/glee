@@ -34,6 +34,7 @@ $(function() {
     },
 	}
 	);
+
 	$('.intro').slick({
 		dots: true,
 		arrows: false,
@@ -64,7 +65,7 @@ $(function() {
 	]
 	});
 
-	$('.burger, .header__nav a').on('click', function () {
+	$('.burger, .header__link').on('click', function () {
 		$('.header__nav').toggleClass('header__nav--active');
 	})
 
@@ -100,7 +101,6 @@ $(function() {
 			effects: "fade translateZ(-100px)"
     },
 		selectors: {
-      // target: '[data-ref="design-card"]',
 			control: '.design__mixitup-control'
     }
 	});
@@ -111,7 +111,6 @@ $(function() {
       effects: "fade translateZ(-100px)"
     },
 		selectors: {
-      // target: '[data-ref="week-card"]',
 			control: '.week__mixitup-control'
     },
 	});

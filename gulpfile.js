@@ -74,7 +74,7 @@ function cleanDist() {
 }
 
 function includeHtml() {
-	return src('app/html/**/*.html')
+	return src('app/html/**/[^_]*.html')
 	.pipe(fileinclude({
       prefix: '@',
       basepath: '@file'

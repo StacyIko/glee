@@ -135,6 +135,7 @@
 
 	&__time, &__author {
 		padding-left: 20px;
+		line-height: 1;
 		position: relative;
 		&::before {
 			content: '';
