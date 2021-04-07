@@ -469,6 +469,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 0 18px;
+
+		a:hover {
+			text-decoration: underline;
+		}
   }
 
   &__heading {

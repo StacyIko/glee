@@ -51,7 +51,7 @@
 			position: relative;
 
 			@include a(768) {
-				max-height: 250px;
+				max-height: 220px;
 			}
 		}
 
@@ -194,54 +194,3 @@
 		}
 }
 
-.filter-item {
-
-		&__title {
-		}
-
-		&__form {
-		}
-
-		&__label {
-		}
-
-		&__input {
-		}
-
-		&__checkbox {
-		}
-
-		&__text {
-		}
-
-		&__icon {
-		}
-}
-.filter-category {
-}
-.recent {
-
-		&__title {
-		}
-
-		&__items {
-		}
-
-		&__item {
-		}
-
-		&__img-box {
-		}
-
-		&__img {
-		}
-
-		&__content {
-		}
-
-		&__heading {
-		}
-
-		&__date {
-		}
-}

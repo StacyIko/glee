@@ -423,6 +423,8 @@
 
 .comments-form {
   padding: 25px 0;
+	width: 100%;
+	max-width: 830px;
 
   &__title {
     margin-bottom: 40px;
@@ -486,16 +488,24 @@
     }
   }
 
+	&__stars {
+		margin: 40px 0;
+	}
+
   &__input {
     height: 50px;
     width: 100%;
     max-width: 400px;
+
+		@include a(768) {
+			max-width: none;
+		}
   }
 
   &__input,
   &__textarea {
     width: 100%;
-    padding: 17px 40px 17px 17px;
+    padding: 17px 45px 17px 17px;
     border: 1px solid #e5e5e5;
 
     &:focus {

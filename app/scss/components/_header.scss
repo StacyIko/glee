@@ -1,11 +1,10 @@
 .header {
   color: $header;
-  // background-color: #ffffff;
 
   .logo {
     padding-left: 15px;
-		@media (max-width: $screen-s) {
-			z-index: 3;
+		@include a(768) {
+			z-index: 11;
 		}
   }
 
@@ -36,6 +35,7 @@
         position: absolute;
         top: 0;
         left: 0;
+				z-index: -1;
 				background-color: #fff;
       }
     }

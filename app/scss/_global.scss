@@ -43,6 +43,14 @@ main {
   }
 }
 
+.container-slick {
+  width: 100%;
+  max-width: 1170px;
+  // padding: 0 15px;
+  margin: 0 auto;
+	// box-shadow: 0px 10px 50px 6px rgba(37, 37, 37, 0.05);
+}
+
 a {
   text-decoration: none;
 }
@@ -72,7 +80,6 @@ img {
 .logo {
   flex-shrink: 0;
   display: flex;
-  // justify-content: center;
 }
 
 .logo__img {
@@ -264,6 +271,33 @@ button {
   }
 }
 
+.prev, .next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 25px;
+	background-position: center center;
+	border: 2px solid #edf1f4;
+
+	transition: border-color .3s;
+
+	&:hover {
+		border-color: $accent;
+		background-color: transparent;
+	}
+}
+
+.prev {
+	background-image: url('../images/icons/arrow-left.png');
+	margin-right: 20px;
+}
+
+.next {
+	background-image: url('../images/icons/arrow-right.png');
+}
 .circle-btn {
   display: block;
   width: 50px;
