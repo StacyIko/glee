@@ -6,6 +6,7 @@ $(function() {
 		arrows: false,
 		// autoplay: true,
 		autoplaySpeed: 5000,
+		// variableWidth: true
 	});
 	$('#prev').on('click', function() {
   	$('.related__cards').slick('slickPrev');
