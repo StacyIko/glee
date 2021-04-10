@@ -1,32 +1,203 @@
 .contacts {
 
-		&__inner {
+  &__top {
+    text-align: center;
+    padding: 110px 0;
+
+		@include a(768) {
+			padding: 50px 0;
+		}
+  }
+
+  &__suptitle {
+    font-size: 16px;
+    @include font('Poppins', 700);
+    color: $accent;
+  }
+
+  &__title {
+		margin-bottom: 70px;
+    font-size: 35px;
+    @include font('DMSans', 700);
+    color: $header;
+
+		@include a(991) {
+			margin-bottom: 50px;
 		}
 
-		&__suptitle {
+		@include a(576) {
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+  }
+
+  &__items {
+    display: flex;
+		@include a(991) {
+			flex-direction: column;
+			align-items: center;
+		}
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+		
+		width: 100%;
+		max-width: 370px;
+    padding: 75px 15px;
+    background-color: #fbfbfb;
+    border: 3px solid transparent;
+
+		transition: border-color .3s;
+
+		@include a(991) {
+			padding: 30px 15px;
 		}
 
-		&__title {
-		}
-		&__items {
-		}
-		&__item {
+		@include a(576) {
+			padding: 20px 10px;
 		}
 
-		&__heading {
+		&:not(:last-child) {
+			margin-right: 30px;
+
+			@include a(991) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
 		}
 
-		&__form {
-			width: 100%;
-			max-width: 620px;
-			margin-right: 50px;
+    p {
+      color: #565872;
+			&:not(:last-child) {
+				@include a(576) {
+					margin-bottom: 5px;
+				}
+			}
+    }
+		
+		&:hover {
+			border-color: $accent;
+
+			.contacts__icon::before {
+				background-color: $accent;
+			}
+
+			.contacts__icon svg {
+				fill: #ffffff;
+			}
 		}
-		&__footer {
-			display: flex;
+  }
+
+  &__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+		margin-bottom: 55px;
+
+		@include a(991) {
+			margin-bottom: 15px;
 		}
+
+		@include a(576) {
+			display: none;
+		}
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background-color: #ffffff;
+			box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+
+			transition: background-color .3s;
+    }
+
+
+    svg {
+      fill: $accent;
+      z-index: 2;
+			transition: fill .3s;
+    }
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.address-icon {
+			width: 31px;
+      height: 44px;
+		}
+
+		.mail-icon {
+			width: 37px;
+			height: 35px;
+		}
+
+		.phone-icon {
+			width: 37px;
+			height: 45px;
+		}
+  }
+
+  &__heading {
+    font-size: 20px;
+		@include font('DMSans', 700);
+		color: #222222;
+		margin-bottom: 15px;
+
+		@include a(576) {
+			margin-bottom: 10px;
+		}
+  }
+
+  &__footer {
+    display: flex;
+
+		@include a(991) {
+			flex-direction: column;
+			align-items: center;
+		}
+  }
+
+	  &__form {
+    width: 100%;
+		min-width: 490px;
+    max-width: 620px;
+    margin-right: 50px;
+
+		@include a(991) {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		@include a(576) {
+			min-width:fit-content;
+		}
+  }
 }
+
 #map {
-	width: 100%;
-	max-width: 500px;
-	height: 335px;
+  width: 100%;
+  max-width: 500px;
+  height: 335px;
+
+	@include a(991) {
+		max-width: none;
+	}
+
+	@include a(576) {
+		height: 250px;
+	}
 }

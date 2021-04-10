@@ -4,9 +4,28 @@ $(function() {
   	slidesToScroll: 1,
   	dots: false,
 		arrows: false,
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 5000,
-		// variableWidth: true
+		responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+		{
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+		{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+		]
 	});
 	$('#prev').on('click', function() {
   	$('.related__cards').slick('slickPrev');
@@ -27,7 +46,16 @@ $(function() {
 		asNavFor: '.product-details__thumb',
   	arrows: false,
   	fade: true,
-		draggable: false  	
+		draggable: false,
+		responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        draggable: true,
+				dots: true
+      }
+    }
+		]
 	});
 	$('.product-details__thumb').slick({
 		asNavFor: '.product-details__big',

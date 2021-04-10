@@ -1,0 +1,61 @@
+.terms {
+  padding-top: 110px;
+
+  @include a(991) {
+    padding-top: 70px;
+  }
+
+  @include a(768) {
+    padding-top: 50px;
+  }
+
+  @include a(576) {
+    padding-top: 30px;
+  }
+
+  &__items {}
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @include a(768) {
+        margin-bottom: 30px;
+      }
+
+      @include a(576) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+		margin-bottom: 20px;
+
+		@include a(576) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+
+    li::before {
+      content: '0'counter(item) '.';
+      counter-increment: item;
+      padding-right: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+
+  }
+}

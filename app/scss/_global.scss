@@ -2,7 +2,6 @@ body {
   color: $primary;
   font-size: 16px;
   line-height: 1.9;
-  // 30px
   @extend %rubik-400;
   background-color: #ffffff;
   height: 100%;
@@ -125,7 +124,7 @@ img {
   color: #222933;
 
   @include a(576) {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
