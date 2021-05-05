@@ -1,5 +1,5 @@
 # glee
-E-commerce furniture website  
+E-commerce furniture website built with HTML5, SCSS, JQ, Gulp
 Home page https://stacyiko.github.io/glee/  
 About page https://stacyiko.github.io/glee/about  
 Blog-list https://stacyiko.github.io/glee/blog-list  
